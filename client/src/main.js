@@ -22,7 +22,7 @@ const { message, notification, dialog } = createDiscreteApi([
  * sass 减少写css的复杂性
  * vue-router
  * naive-ui ui的一个框架
- * wangeditor 富文本
+ * wangeditor 富文本编辑器
  */
 
 const app = createApp(App);
