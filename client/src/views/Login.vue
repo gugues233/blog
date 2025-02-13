@@ -11,10 +11,12 @@
             </n-form>
             <template #footer>
                 <n-checkbox v-model:checked="admin.rember" label="记住我" />
-                <n-button @click="login">登录</n-button>
+                <n-button @click="toLogin">登录</n-button>
+                <n-button @click="toRegister" style="margin-left: 10px;">注册</n-button>
             </template>
         </n-card>
     </div>
+
 </template>
 
 <script setup>
@@ -50,7 +52,7 @@ const admin = reactive({
     rember: localStorage.getItem("rember") == 1 || false
 })
 
-const login = async () => { //将数据传给服务端
+const toLogin = async () => { //将数据传给服务端
     let result = await axios.post("/admin/login", {
         account: admin.account,
         password: admin.password
@@ -73,6 +75,11 @@ const login = async () => { //将数据传给服务端
         message.error("登录失败")
     }
     console.log(result)
+}
+
+// 添加跳转注册页面的方法
+const toRegister = () => {
+  router.push("/register"); // 注册页面的路由是 /register
 }
 
 </script>

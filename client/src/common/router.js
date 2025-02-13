@@ -6,6 +6,7 @@ let routes = [
   { path: "/", component: () => import("../views/HomePage.vue") },
   { path: "/detail", component: () => import("../views/Detail.vue") },
   { path: "/login", component: () => import("../views/Login.vue") },
+  { path: "/register", component: () => import("../views/Register.vue") },
   {
     path: "/dashboard",
     component: () => import("../views/dashboard/Dashboard.vue"),
