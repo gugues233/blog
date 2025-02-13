@@ -1,11 +1,14 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import Login from '../views/Login.vue';
+import Register from '../views/Register.vue'; // 引入新的注册组件
 
 let routes = [
-  //路由的配置 这个项目可能用不到
+  //路由的配置
   { path: "/test", component: () => import("../views/Test.vue") }, //访问/test的时候会触发访问../views/Test.vue
   { path: "/", component: () => import("../views/HomePage.vue") },
   { path: "/detail", component: () => import("../views/Detail.vue") },
   { path: "/login", component: () => import("../views/Login.vue") },
+  { path: "/register", component: () => import("../views/Register.vue")},
   {
     path: "/dashboard",
     component: () => import("../views/dashboard/Dashboard.vue"),
