@@ -56,7 +56,6 @@ app.all("*", async (req, res, next) => {
 
 app.use("/test", require("./routers/TestRouter"));
 app.use("/admin", require("./routers/AdminRouter"));
-app.use("/register", require("./routers/RegisterRouter"));
 app.use("/category", require("./routers/CategoryRouter"));
 app.use("/blog", require("./routers/BlogRouter"));
 app.use("/upload", require("./routers/UploadRouter"));
